@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import HoteloUI
 
 @main
 struct HoteloApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnBoardingView()
         }
     }
 }
