@@ -82,4 +82,5 @@ struct OnBoardingView: View {
 
 #Preview {
     OnBoardingView()
+        .environment(Coordinator())
 }
