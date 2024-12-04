@@ -12,7 +12,7 @@ import HoteloUI
 struct HoteloApp: App {
     var body: some Scene {
         WindowGroup {
-            OnBoardingView()
+            CoordinatorView()
         }
     }
 }
