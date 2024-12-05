@@ -11,6 +11,15 @@ struct ExploreView: View {
     @Environment(Coordinator.self) private var coordinator
     
     private let height = 60.0
+    struct City {
+        let image: String
+        let title: String
+    }
+    
+    private let cities: [City] = [
+        .init(image: "dubai", title: "Dubai"),
+        .init(image: "thailand", title: "Thailand")
+    ]
     
     var body: some View {
         ScrollView {
@@ -29,8 +38,15 @@ struct ExploreView: View {
             
             Section {
                 ScrollView(.horizontal) {
-                    nearbyButton
+                    HStack {
+                        nearbyButton
+                        
+                        ForEach(cities, id: \.title) { city in
+                            cityButton(image: city.image, title: city.title)
+                        }
+                    }
                 }
+                .scrollIndicators(.hidden)
                 .padding(.horizontal)
             } header: {
                 Text("Explore City")
@@ -99,7 +115,7 @@ struct ExploreView: View {
             HStack {
                 Image(systemName: "paperplane")
                     .imageScale(.large)
-                    .frame(width: 50, height: 50)
+                    .frame(width: 40, height: 40)
                     .background(Color(.accent))
                     .clipShape(Circle())
                 Text("Nearby")
@@ -112,24 +128,24 @@ struct ExploreView: View {
         .clipShape(Capsule())
     }
     
-    func locationButton() -> some View {
+    func cityButton(image: String, title: String) -> some View {
         Button {
             
         } label: {
             HStack {
-                Image(systemName: "paperplane")
+                Image(image, bundle: .module)
+                    .resizable()
+                    .scaledToFill()
                     .imageScale(.large)
-                    .frame(width: 50, height: 50)
-                    .background(Color(.accent))
+                    .frame(width: 40, height: 40)
                     .clipShape(Circle())
-                Text("Nearby")
+                Text(title)
                     .padding(.trailing)
             }
-            .foregroundStyle(.black)
+            .foregroundStyle(.white)
         }
         .padding(5)
-        .background(.white)
-        .clipShape(Capsule())
+        .background(Capsule().stroke(.gray))
     }
 }
 
