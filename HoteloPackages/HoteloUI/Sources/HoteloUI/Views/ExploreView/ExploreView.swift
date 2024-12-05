@@ -16,9 +16,28 @@ struct ExploreView: View {
         let title: String
     }
     
+    struct Offer {
+        let title: String
+        let description: String
+        let image: String
+    }
+    
     private let cities: [City] = [
         .init(image: "dubai", title: "Dubai"),
         .init(image: "thailand", title: "Thailand")
+    ]
+    
+    private let offers: [Offer] = [
+        .init(
+            title: "Plan Your Trip",
+            description: "Enjoy your stay with us and have fun",
+            image: "santorini"
+        ),
+        .init(
+            title: "Plan Your Trip",
+            description: "Enjoy your stay with us and have fun",
+            image: "dolomite"
+        )
     ]
     
     var body: some View {
@@ -54,6 +73,14 @@ struct ExploreView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
                     .foregroundStyle(.white)
+            }
+            
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(offers, id: \.image) { offer in
+                        offerView(offer: offer)
+                    }
+                }
             }
         }
         .background(Color(.primary))
@@ -124,8 +151,7 @@ struct ExploreView: View {
             .foregroundStyle(.black)
         }
         .padding(5)
-        .background(.white)
-        .clipShape(Capsule())
+        .background(Capsule().fill(.white))
     }
     
     func cityButton(image: String, title: String) -> some View {
@@ -146,6 +172,42 @@ struct ExploreView: View {
         }
         .padding(5)
         .background(Capsule().stroke(.gray))
+    }
+    
+    func offerView(offer: Offer) -> some View {
+        HStack {
+            VStack(alignment: .leading, spacing: 10) {
+                Text(offer.title)
+                    .font(.title)
+                    .fontWeight(.medium)
+                Text(offer.description)
+                    .font(.body)
+                
+                Button {
+                    
+                } label: {
+                    HStack(alignment: .center) {
+                        Text("Book Now")
+                        Image(systemName: "arrow.right")
+                    }
+                    .foregroundStyle(.white)
+                    .padding()
+                    .background(Capsule().fill(Color(.primary)))
+                }
+                
+            }
+            .padding(.horizontal)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            
+            Image(offer.image, bundle: .module)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 100, height: 200)
+        }
+        .frame(width: UIScreen.main.bounds.width - 80)
+        .background(Color(.accent))
+        .clipShape(RoundedRectangle(cornerRadius: 20, style: .circular))
+        .padding()
     }
 }
 
