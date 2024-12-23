@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9CB859E62CFE05D50008E173 /* HoteloUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB859E52CFE05D50008E173 /* HoteloUI */; };
+		9CB85A342D19CBA90008E173 /* OnBoarding in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB85A332D19CBA90008E173 /* OnBoarding */; };
+		9CB85A4A2D19CDCF0008E173 /* Explore in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB85A492D19CDCF0008E173 /* Explore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,8 @@
 		9CB859A62CFE01880008E173 /* Hotelo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hotelo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB859B62CFE018A0008E173 /* HoteloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoteloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB859C02CFE018A0008E173 /* HoteloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoteloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CB859D42CFE04080008E173 /* HoteloUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HoteloUI; path = /Users/mohamedelhanafi/Desktop/Hotelo/HoteloPackages/HoteloUI; sourceTree = "<absolute>"; };
+		9CB85A2C2D19C9930008E173 /* OnBoarding */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OnBoarding; path = HoteloPackages/OnBoarding; sourceTree = "<group>"; };
+		9CB85A362D19CCD00008E173 /* Explore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Explore; path = /Users/mohamedelhanafi/Desktop/Hotelo/HoteloPackages/Explore; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -57,7 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CB859E62CFE05D50008E173 /* HoteloUI in Frameworks */,
+				9CB85A4A2D19CDCF0008E173 /* Explore in Frameworks */,
+				9CB85A342D19CBA90008E173 /* OnBoarding in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +84,8 @@
 		9CB8599D2CFE01880008E173 = {
 			isa = PBXGroup;
 			children = (
-				9CB859D42CFE04080008E173 /* HoteloUI */,
+				9CB85A362D19CCD00008E173 /* Explore */,
+				9CB85A2C2D19C9930008E173 /* OnBoarding */,
 				9CB859A82CFE01880008E173 /* Hotelo */,
 				9CB859B92CFE018A0008E173 /* HoteloTests */,
 				9CB859C32CFE018A0008E173 /* HoteloUITests */,
@@ -128,6 +132,8 @@
 			name = Hotelo;
 			packageProductDependencies = (
 				9CB859E52CFE05D50008E173 /* HoteloUI */,
+				9CB85A332D19CBA90008E173 /* OnBoarding */,
+				9CB85A492D19CDCF0008E173 /* Explore */,
 			);
 			productName = Hotelo;
 			productReference = 9CB859A62CFE01880008E173 /* Hotelo.app */;
@@ -212,7 +218,8 @@
 			mainGroup = 9CB8599D2CFE01880008E173;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				9CB859D32CFE03E20008E173 /* XCLocalSwiftPackageReference "HoteloPackages/HoteloUI" */,
+				9CB85A322D19CAAB0008E173 /* XCLocalSwiftPackageReference "HoteloPackages/OnBoarding" */,
+				9CB85A352D19CCCA0008E173 /* XCLocalSwiftPackageReference "HoteloPackages/Explore" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9CB859A72CFE01880008E173 /* Products */;
@@ -579,9 +586,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		9CB859D32CFE03E20008E173 /* XCLocalSwiftPackageReference "HoteloPackages/HoteloUI" */ = {
+		9CB85A322D19CAAB0008E173 /* XCLocalSwiftPackageReference "HoteloPackages/OnBoarding" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = HoteloPackages/HoteloUI;
+			relativePath = HoteloPackages/OnBoarding;
+		};
+		9CB85A352D19CCCA0008E173 /* XCLocalSwiftPackageReference "HoteloPackages/Explore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = HoteloPackages/Explore;
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -589,6 +600,15 @@
 		9CB859E52CFE05D50008E173 /* HoteloUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = HoteloUI;
+		};
+		9CB85A332D19CBA90008E173 /* OnBoarding */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OnBoarding;
+		};
+		9CB85A492D19CDCF0008E173 /* Explore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CB85A352D19CCCA0008E173 /* XCLocalSwiftPackageReference "HoteloPackages/Explore" */;
+			productName = Explore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

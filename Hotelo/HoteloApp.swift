@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import HoteloUI
 
 @main
 struct HoteloApp: App {

@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import OnBoarding
+import Explore
 
 public enum Page: String, Identifiable {
     case onBoarding
@@ -44,7 +46,9 @@ enum CoordinatorState {
     @MainActor @ViewBuilder func build(page: Page) -> some View {
         switch page {
         case .onBoarding:
-            OnBoardingView()
+            OnBoardingView {
+                self.changeState(state: .explore)
+            }
             
         case .explore:
             ExploreView()
