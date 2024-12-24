@@ -12,6 +12,8 @@ public struct CoordinatorView: View {
     
     public init() {
         self.coordinator = coordinator
+        
+        setNavigation()
     }
     
     public var body: some View {
@@ -29,5 +31,18 @@ public struct CoordinatorView: View {
             }
         }
         .environment(coordinator)
+    }
+    
+    private func setNavigation() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(Color(.primary))
+        
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
     }
 }

@@ -8,10 +8,12 @@
 import SwiftUI
 import OnBoarding
 import Explore
+import PopularHotels
 
 public enum Page: String, Identifiable {
     case onBoarding
     case explore
+    case hotels
     
     public var id: String {
         rawValue
@@ -51,7 +53,14 @@ enum CoordinatorState {
             }
             
         case .explore:
-            ExploreView()
+            ExploreView {
+                self.push(page: .hotels)
+            }
+            
+        case .hotels:
+            PopularHotelsView {
+                self.pop()
+            }
         }
     }
 }
