@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Shared
 
 public struct OnBoardingView: View {
     @State private var viewModel = OnBoardingViewModel()
@@ -56,11 +57,11 @@ public struct OnBoardingView: View {
                             viewModel.nextPage(page: page)
                         } label: {
                             Image(systemName: "arrow.right")
-                                .foregroundStyle(Color(.primary))
+                                .foregroundStyle(Colors.primary)
                             
                         }
                         .frame(width: 50, height: 50)
-                        .background(Color(.accent))
+                        .background(Colors.accent)
                         .clipShape(Circle())
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     }
@@ -72,7 +73,7 @@ public struct OnBoardingView: View {
     private func clippedImage(image: Image) -> some View {
         GeometryReader { geo in
             ZStack {
-                Color(.primary)
+                Colors.primary
                 image
                     .resizable()
                     .scaledToFill()

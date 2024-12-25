@@ -10,6 +10,7 @@
 		9CB85A782D1B9D1E0008E173 /* Explore in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB85A772D1B9D1E0008E173 /* Explore */; };
 		9CB85A7A2D1B9D330008E173 /* PopularHotels in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB85A792D1B9D330008E173 /* PopularHotels */; };
 		9CB85A7C2D1B9DB60008E173 /* OnBoarding in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB85A332D19CBA90008E173 /* OnBoarding */; };
+		9CB85ACC2D1C89200008E173 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB85ACB2D1C89200008E173 /* Shared */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		9CB85A8F2D1C869F0008E173 /* Explore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Explore; path = /Users/mohamedelhanafi/Desktop/Hotelo/Packages/Explore; sourceTree = "<absolute>"; };
 		9CB85A902D1C86A30008E173 /* OnBoarding */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OnBoarding; path = /Users/mohamedelhanafi/Desktop/Hotelo/Packages/OnBoarding; sourceTree = "<absolute>"; };
 		9CB85A912D1C86A60008E173 /* PopularHotels */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PopularHotels; path = /Users/mohamedelhanafi/Desktop/Hotelo/Packages/PopularHotels; sourceTree = "<absolute>"; };
+		9CB85ACD2D1C892A0008E173 /* Shared */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Shared; path = /Users/mohamedelhanafi/Desktop/Hotelo/Packages/Shared; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -62,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB85A7C2D1B9DB60008E173 /* OnBoarding in Frameworks */,
+				9CB85ACC2D1C89200008E173 /* Shared in Frameworks */,
 				9CB85A782D1B9D1E0008E173 /* Explore in Frameworks */,
 				9CB85A7A2D1B9D330008E173 /* PopularHotels in Frameworks */,
 			);
@@ -87,6 +90,7 @@
 		9CB8599D2CFE01880008E173 = {
 			isa = PBXGroup;
 			children = (
+				9CB85ACD2D1C892A0008E173 /* Shared */,
 				9CB85A8F2D1C869F0008E173 /* Explore */,
 				9CB85A902D1C86A30008E173 /* OnBoarding */,
 				9CB85A912D1C86A60008E173 /* PopularHotels */,
@@ -138,6 +142,7 @@
 				9CB85A332D19CBA90008E173 /* OnBoarding */,
 				9CB85A772D1B9D1E0008E173 /* Explore */,
 				9CB85A792D1B9D330008E173 /* PopularHotels */,
+				9CB85ACB2D1C89200008E173 /* Shared */,
 			);
 			productName = Hotelo;
 			productReference = 9CB859A62CFE01880008E173 /* Hotelo.app */;
@@ -225,6 +230,7 @@
 				9CB85A742D1B9CF10008E173 /* XCLocalSwiftPackageReference "Packages/Explore" */,
 				9CB85A752D1B9D010008E173 /* XCLocalSwiftPackageReference "Packages/OnBoarding" */,
 				9CB85A762D1B9D0E0008E173 /* XCLocalSwiftPackageReference "Packages/PopularHotels" */,
+				9CB85ACA2D1C89120008E173 /* XCLocalSwiftPackageReference "Packages/Shared" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9CB859A72CFE01880008E173 /* Products */;
@@ -603,6 +609,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/PopularHotels;
 		};
+		9CB85ACA2D1C89120008E173 /* XCLocalSwiftPackageReference "Packages/Shared" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Shared;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -619,6 +629,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9CB85A762D1B9D0E0008E173 /* XCLocalSwiftPackageReference "Packages/PopularHotels" */;
 			productName = PopularHotels;
+		};
+		9CB85ACB2D1C89200008E173 /* Shared */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CB85ACA2D1C89120008E173 /* XCLocalSwiftPackageReference "Packages/Shared" */;
+			productName = Shared;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

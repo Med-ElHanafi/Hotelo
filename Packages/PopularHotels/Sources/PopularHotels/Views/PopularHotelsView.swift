@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Shared
 
 public struct PopularHotelsView: View {
     let onBackButtonTap: () -> Void
@@ -20,7 +21,7 @@ public struct PopularHotelsView: View {
                 hotelView(hotel: $0)
             }
         }
-        .background(Color(.primary))
+        .background(Colors.primary)
         .scrollIndicators(.hidden)
         .navigationTitle("Popular Hotels")
         .navigationBarBackButtonHidden(true)
@@ -35,7 +36,7 @@ public struct PopularHotelsView: View {
                             .frame(width: 40, height: 40)
                             .background(
                                 Circle()
-                                    .fill(Color(.secondary))
+                                    .fill(Colors.secondary)
                             )
                     }
                 }
@@ -45,7 +46,7 @@ public struct PopularHotelsView: View {
     
     func hotelView(hotel: Hotel) -> some View {
         HStack(alignment: .center) {
-            Image(hotel.image, bundle: .module)
+            hotel.image
                 .resizable()
                 .scaledToFill()
                 .frame(width: 150, height: 150)
@@ -76,9 +77,9 @@ public struct PopularHotelsView: View {
             
             Label(String(format: "%.1f", hotel.rating), systemImage: "star.fill")
                 .padding(.trailing, 10)
-                .foregroundStyle(.yellow)
+                .foregroundStyle(Colors.yellow)
         }
-        .background(Color(.secondary))
+        .background(Colors.secondary)
         .clipShape(RoundedRectangle(cornerRadius: 25, style: .circular))
         .padding(.horizontal)
     }

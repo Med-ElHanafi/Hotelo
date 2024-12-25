@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Shared
 
 public struct ExploreView: View {
     private let height = 60.0
@@ -54,12 +55,12 @@ public struct ExploreView: View {
                     .foregroundStyle(.white)
             }
         }
-        .background(Color(.primary))
+        .background(Colors.primary)
     }
     
     var profileView: some View {
         HStack(alignment: .center) {
-            Image(.user2)
+            ImageResources.user
                 .resizable()
                 .scaledToFit()
                 .frame(width: height, height: height)
@@ -81,7 +82,7 @@ public struct ExploreView: View {
         } label: {
             Image(systemName: "bell")
         }
-        .buttonStyle(CircularButton())
+        .circularButton()
     }
     
     var searchField: some View {
@@ -92,7 +93,7 @@ public struct ExploreView: View {
             TextField("", text: .constant(""), prompt: Text("Search for hotel").foregroundStyle(.gray))
         }
         .padding()
-        .background(Color(.secondary))
+        .background(Colors.secondary)
         .clipShape(Capsule())
         .foregroundStyle(.white)
     }
@@ -103,7 +104,7 @@ public struct ExploreView: View {
         } label: {
             Image(systemName: "line.3.horizontal.decrease.circle")
         }
-        .buttonStyle(CircularButton())
+        .circularButton()
     }
 }
 

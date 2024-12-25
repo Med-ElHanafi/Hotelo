@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Shared
 
 enum OnBoardingPage: String, CaseIterable, Identifiable {
     case discover, book, enjoy
@@ -28,11 +29,11 @@ enum OnBoardingPage: String, CaseIterable, Identifiable {
     var image: Image {
         switch self {
         case .discover:
-            Image("discover", bundle: .module)
+            ImageResources.discover
         case .book:
-            Image("book", bundle: .module)
+            ImageResources.book
         case .enjoy:
-            Image("services", bundle: .module)
+            ImageResources.enjoy
         }
     }
 }

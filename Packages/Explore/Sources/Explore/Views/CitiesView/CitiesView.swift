@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Shared
 
 struct CitiesView: View {
     var body: some View {
@@ -13,7 +14,7 @@ struct CitiesView: View {
             HStack {
                 nearbyButton
                 
-                ForEach(City.cities, id: \.description) { city in
+                ForEach(City.mock, id: \.description) { city in
                     cityButton(image: city.image, title: city.title)
                 }
             }
@@ -22,12 +23,12 @@ struct CitiesView: View {
         .padding(.horizontal)
     }
     
-    private func cityButton(image: String, title: String) -> some View {
+    private func cityButton(image: Image, title: String) -> some View {
         Button {
             
         } label: {
             HStack {
-                Image(image, bundle: .module)
+                image
                     .resizable()
                     .scaledToFill()
                     .imageScale(.large)
@@ -50,7 +51,7 @@ struct CitiesView: View {
                 Image(systemName: "paperplane")
                     .imageScale(.large)
                     .frame(width: 40, height: 40)
-                    .background(Color(.accent))
+                    .background(Colors.accent)
                     .clipShape(Circle())
                 Text("Nearby")
                     .padding(.trailing)

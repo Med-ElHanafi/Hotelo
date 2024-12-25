@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Shared
 
 struct RecomendationView: View {
     var onCitySelect: () -> Void
@@ -13,7 +14,7 @@ struct RecomendationView: View {
     var body: some View {
         ScrollView(.horizontal) {
             HStack {
-                ForEach(City.cities, id: \.description) { city in
+                ForEach(City.mock, id: \.description) { city in
                     Button {
                         onCitySelect()
                     } label: {
@@ -26,7 +27,7 @@ struct RecomendationView: View {
     }
     
     private func imageView(city: City) -> some View {
-        Image(city.image, bundle: .module)
+        city.image
             .resizable()
             .scaledToFill()
             .frame(height: 150)
@@ -69,7 +70,7 @@ struct RecomendationView: View {
                     
                 } icon: {
                     Image(systemName: "mappin.circle")
-                        .foregroundStyle(Color(.accent))
+                        .foregroundStyle(Colors.accent)
                 }
                 .font(.footnote)
             }
@@ -79,10 +80,10 @@ struct RecomendationView: View {
                 
             } label: {
                 Image(systemName: "arrow.right")
-                    .foregroundStyle(Color(.primary))
+                    .foregroundStyle(Colors.primary)
                     .imageScale(.small)
                     .frame(width: 40, height: 40)
-                    .background(Color(.accent))
+                    .background(Colors.accent)
                     .clipShape(Circle())
             }
             
@@ -98,7 +99,7 @@ struct RecomendationView: View {
         }
         // TODO: remove UIScreen
         .frame(width: UIScreen.main.bounds.width - 100)
-        .background(Color(.secondary))
+        .background(Colors.secondary)
         .clipShape(RoundedRectangle(cornerRadius: 25, style: .circular))
         .padding()
     }

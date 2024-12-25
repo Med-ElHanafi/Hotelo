@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import Shared
 
 struct OffersView: View {
     var body: some View {
         ScrollView(.horizontal) {
             HStack {
-                ForEach(Offer.offers, id: \.image) { offer in
+                ForEach(Offer.mock, id: \.description) { offer in
                     offerView(offer: offer)
                 }
             }
@@ -37,21 +38,21 @@ struct OffersView: View {
                     }
                     .foregroundStyle(.white)
                     .padding()
-                    .background(Capsule().fill(Color(.primary)))
+                    .background(Capsule().fill(Colors.primary))
                 }
                 
             }
             .padding(.horizontal)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             
-            Image(offer.image, bundle: .module)
+            offer.image
                 .resizable()
                 .scaledToFill()
                 .frame(width: 100, height: 200)
         }
         // TODO: remove UIScreen
         .frame(width: UIScreen.main.bounds.width - 80)
-        .background(Color(.accent))
+        .background(Colors.accent)
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .circular))
         .padding()
     }
