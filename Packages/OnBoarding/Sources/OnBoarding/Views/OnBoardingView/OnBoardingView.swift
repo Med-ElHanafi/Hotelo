@@ -10,10 +10,10 @@ import SwiftUI
 public struct OnBoardingView: View {
     @State private var viewModel = OnBoardingViewModel()
     
-    public var skipAction: (() -> Void)?
+    public var onSkipButtonTap: (() -> Void)?
     
-    public init(skipAction: (() -> Void)?) {
-        self.skipAction = skipAction
+    public init(onSkipButtonTap: (() -> Void)?) {
+        self.onSkipButtonTap = onSkipButtonTap
     }
     
     public var body: some View {
@@ -47,7 +47,7 @@ public struct OnBoardingView: View {
                     
                     HStack {
                         Button("Skip") {
-                            skipAction?()
+                            onSkipButtonTap?()
                         }
                         .foregroundStyle(Color.white)
                         .frame(maxWidth: .infinity, alignment: .leading)

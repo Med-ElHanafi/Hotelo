@@ -8,10 +8,10 @@
 import SwiftUI
 
 public struct PopularHotelsView: View {
-    let dismiss: () -> Void
+    let onBackButtonTap: () -> Void
     
-    public init(dismiss: @escaping () -> Void) {
-        self.dismiss = dismiss
+    public init(onBackButtonTap: @escaping () -> Void) {
+        self.onBackButtonTap = onBackButtonTap
     }
     
     public var body: some View {
@@ -27,7 +27,7 @@ public struct PopularHotelsView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button {
-                    dismiss()
+                    onBackButtonTap()
                 } label: {
                     HStack {
                         Image(systemName: "arrow.backward")

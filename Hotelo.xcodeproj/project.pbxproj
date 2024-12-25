@@ -33,6 +33,9 @@
 		9CB859A62CFE01880008E173 /* Hotelo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hotelo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB859B62CFE018A0008E173 /* HoteloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoteloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB859C02CFE018A0008E173 /* HoteloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoteloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CB85A8F2D1C869F0008E173 /* Explore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Explore; path = /Users/mohamedelhanafi/Desktop/Hotelo/Packages/Explore; sourceTree = "<absolute>"; };
+		9CB85A902D1C86A30008E173 /* OnBoarding */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OnBoarding; path = /Users/mohamedelhanafi/Desktop/Hotelo/Packages/OnBoarding; sourceTree = "<absolute>"; };
+		9CB85A912D1C86A60008E173 /* PopularHotels */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PopularHotels; path = /Users/mohamedelhanafi/Desktop/Hotelo/Packages/PopularHotels; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -84,6 +87,9 @@
 		9CB8599D2CFE01880008E173 = {
 			isa = PBXGroup;
 			children = (
+				9CB85A8F2D1C869F0008E173 /* Explore */,
+				9CB85A902D1C86A30008E173 /* OnBoarding */,
+				9CB85A912D1C86A60008E173 /* PopularHotels */,
 				9CB859A82CFE01880008E173 /* Hotelo */,
 				9CB859B92CFE018A0008E173 /* HoteloTests */,
 				9CB859C32CFE018A0008E173 /* HoteloUITests */,

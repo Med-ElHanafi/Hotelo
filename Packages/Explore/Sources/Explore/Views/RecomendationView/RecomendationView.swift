@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct RecomendationView: View {
-    var didTap: () -> Void
+    var onCitySelect: () -> Void
     
     var body: some View {
         ScrollView(.horizontal) {
             HStack {
                 ForEach(City.cities, id: \.description) { city in
                     Button {
-                        didTap()
+                        onCitySelect()
                     } label: {
                         cityView(city: city)
                     }

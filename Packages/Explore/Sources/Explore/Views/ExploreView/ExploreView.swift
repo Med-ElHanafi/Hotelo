@@ -9,10 +9,10 @@ import SwiftUI
 
 public struct ExploreView: View {
     private let height = 60.0
-    private let didTapRecomended: () -> Void
+    private let didRecomendedTap: () -> Void
     
-    public init(didTapRecomended: @escaping () -> Void) {
-        self.didTapRecomended = didTapRecomended
+    public init(didRecomendedTap: @escaping () -> Void) {
+        self.didRecomendedTap = didRecomendedTap
     }
     
     public var body: some View {
@@ -44,7 +44,7 @@ public struct ExploreView: View {
             
             Section {
                 RecomendationView {
-                    didTapRecomended()
+                    didRecomendedTap()
                 }
             } header: {
                 Text("Recomended for your next trip")
